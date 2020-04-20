@@ -4,7 +4,7 @@ import os
 import click
 import toml
 
-snap_userdata = os.environ['SNAP_COMMON']
+snap_userdata = os.environ['SNAP_USER_DATA']
 
 
 @click.command()
@@ -25,7 +25,7 @@ def init(mqtt_broker_ip,
     mqtt_broker_ip = '{mqtt_broker_ip}'
     mqtt_broker_port = '{mqtt_broker_port}'
     ssl_cert_path = '{ssl_cert_path}'
-    mqtt_username = '{mqtt_username}
+    mqtt_username = '{mqtt_username}'
     """
     parsed_config = toml.loads(config)
     formatted_config = toml.dumps(parsed_config)
