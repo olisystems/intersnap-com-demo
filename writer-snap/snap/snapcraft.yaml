@@ -31,7 +31,7 @@ slots:
     interface: content
     content: shared-files
     read: 
-      - $SNAP_COMMON
+      - $SNAP_DATA
 
 apps:
   writer-snap:

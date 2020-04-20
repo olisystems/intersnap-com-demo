@@ -19,7 +19,7 @@ plugs:
   shared-files:
     interface: content
     content: shared-files
-    target: $SNAP_COMMON
+    target: $SNAP_DATA
     #default-provider: writer-snap:shared-files
 
 apps:

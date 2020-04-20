@@ -4,7 +4,7 @@ import os
 import click
 import toml
 
-snap_userdata = os.environ['SNAP_COMMON']
+snap_userdata = os.environ['SNAP_DATA']
 
 
 @click.command()
