@@ -1,0 +1,26 @@
+name: reader-snap
+base: core18
+version: '0.1dev'
+summary: A test snap to read configs from another snap
+description: |
+  A test snap to read configs from another snap
+
+grade: devel
+confinement: devmode
+
+parts:
+  reader-snap:
+    # See 'snapcraft plugins'
+    source: .
+    plugin: python
+    requirements: ['requirements.txt']
+
+plugs:
+  shared-files:
+    interface: content
+    content: shared-files
+    target: $SNAP_USER_DATA
+
+apps:
+  reader-snap:
+    command: reader-snap
