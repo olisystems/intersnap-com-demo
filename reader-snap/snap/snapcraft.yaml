@@ -19,7 +19,8 @@ plugs:
   shared-files:
     interface: content
     content: shared-files
-    target: $SNAP_USER_DATA
+    target: $SNAP_COMMON
+    #default-provider: writer-snap:shared-files
 
 apps:
   reader-snap:

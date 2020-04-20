@@ -2,7 +2,7 @@ import os
 
 import toml
 
-snap_userdata = os.environ['SNAP_USER_DATA']
+snap_userdata = os.environ['SNAP_COMMON']
 
 
 def init():
