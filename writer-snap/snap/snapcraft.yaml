@@ -15,23 +15,24 @@ parts:
     plugin: python
     requirements: ['requirements.txt']
 
-  
-slots:
-  content2:
-    interface: content
-    content: writable-data
-    write: 
-      - $SNAP_COMMON
-
-
+  writer-snap-data:
+    plugin: dump
+    source: .
 
   launcher:
     plugin: nil
     source: .
     override-build: |
       mkdir -p $SNAPCRAFT_PART_INSTALL/bin
-      cp -av control.sh $SNAPCRAFT_PART_INSTALL/bin/
+      cp -av writer.sh $SNAPCRAFT_PART_INSTALL/bin/
+
+slots:
+  shared-files:
+    interface: content
+    content: shared-files
+    write: 
+      - $SNAP_USER_DATA
 
 apps:
-  olibox-control:
+  writer-snap:
     command: writer.sh writer-snap
